@@ -46,3 +46,8 @@ output "fruits_first" {
 output "fruits_two" {
   value = var.fruits[1]
 }
+
+// Access a map variable
+output "fruit_stock_apple" {
+  value = "var.fruit_stock"["apple"]
+}
