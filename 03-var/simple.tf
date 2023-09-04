@@ -49,5 +49,5 @@ output "fruits_two" {
 
 // Access a map variable
 output "fruit_stock_apple" {
-  value = "var.fruit_stock"["apple"]
+  value = var.fruit_stock["apple"]
 }
