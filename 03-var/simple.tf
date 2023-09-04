@@ -7,7 +7,7 @@ output "fruit_name" {
 }
 
 # list Variable
-variable "fruit" {
+variable "fruits" {
   default = [
     "apple",
     "banana"
@@ -37,3 +37,9 @@ variable "fruit_stock_with_price" {
     }
   }
 }
+
+// Access the list variable ,list index start's from zero
+output "fruits_first" {
+  value = var.fruits[0]
+}
+
