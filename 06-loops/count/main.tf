@@ -1,5 +1,5 @@
 variable "components" {
-  default = ["frontend","mongodb"]
+  default = ["frontend","mongodb","catalogue"]
 }
 
 resource "aws_instance" "instance" {
@@ -8,8 +8,8 @@ resource "aws_instance" "instance" {
   instance_type = "t3.small"
   vpc_security_group_ids = [ "sg-038da0861b4c1788f" ]
   tags = {
-    Name = ""
+   // Name = ""
     //Name = var.components[count.index]
-    //Name = element(var.components, count.index)
+    Name = element(var.components, count.index)
   }
 }
