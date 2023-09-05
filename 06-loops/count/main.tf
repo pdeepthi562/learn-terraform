@@ -13,3 +13,10 @@ resource "aws_instance" "instance" {
     Name = element(var.components, count.index)
   }
 }
+
+//count is not used as it will destroy the existing resources for some like security group.
+
+resource "aws_security_group" "allow_tls" {
+  count = length(var.components)
+  Name  = element(var.components, count.index)
+}
