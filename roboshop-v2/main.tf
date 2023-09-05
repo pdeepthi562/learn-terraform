@@ -49,7 +49,8 @@ resource "aws_route53_record" "record" {
 }
 
 
+
 output "instances" {
-  value =aws_instance.instance
+  value = aws_instance.instance
 }
 
