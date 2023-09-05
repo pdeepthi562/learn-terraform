@@ -3,3 +3,7 @@ module "test" {
 }
 
 //if we give output in the main module it will print.
+
+output "ami" {
+  value = module.test
+}
