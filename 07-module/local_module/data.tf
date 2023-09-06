@@ -24,6 +24,10 @@ output "ami" {
 }
 resource "aws_instance" "instance" {
   ami = data.aws_ami.ami.id
-  instance_type = "t3.small"
+#  use the variable  var.instance_type  from root module
+  instance_type = var.instance_type
   vpc_security_group_ids = [ "sg-038da0861b4c1788f" ]
 }
+
+#receive the variable should be empty
+variable "instance_type" {}
