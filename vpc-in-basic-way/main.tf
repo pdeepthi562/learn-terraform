@@ -16,7 +16,7 @@ variable "bd_subnets" {
 }
 
 resource "aws_vpc" "main" {
-  cidr_block = "var.cidr"
+  cidr_block = var.cidr
 }
 
 resource "aws_subnet" "public" {
